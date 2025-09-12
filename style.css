@@ -227,6 +227,52 @@ footer {
   color: #ffffff;
 }
 
+/* ----------------------
+   Animazione ingresso schede (più lenta)
+   ---------------------- */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.superquote-card {
+  opacity: 0;
+  transform: translateY(28px);
+  animation-name: fadeInUp;
+  animation-duration: 0.6s; /* prima 0.6s → più lenta */
+  animation-timing-function: cubic-bezier(.22,.9,.35,1);
+  animation-fill-mode: forwards;
+}
+
+/* Ritardi progressivi più ampi */
+.superquote-card:nth-child(1)  { animation-delay: 0.15s; }
+.superquote-card:nth-child(2)  { animation-delay: 0.30s; }
+.superquote-card:nth-child(3)  { animation-delay: 0.45s; }
+.superquote-card:nth-child(4)  { animation-delay: 0.60s; }
+.superquote-card:nth-child(5)  { animation-delay: 0.75s; }
+.superquote-card:nth-child(6)  { animation-delay: 0.90s; }
+.superquote-card:nth-child(7)  { animation-delay: 1.05s; }
+.superquote-card:nth-child(8)  { animation-delay: 1.20s; }
+.superquote-card:nth-child(9)  { animation-delay: 1.35s; }
+.superquote-card:nth-child(10) { animation-delay: 1.50s; }
+.superquote-card:nth-child(11) { animation-delay: 1.65s; }
+.superquote-card:nth-child(12) { animation-delay: 1.80s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .superquote-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
