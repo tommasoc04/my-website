@@ -1,0 +1,120 @@
+/* BASE */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background-color:#7a20b9;
+  color:white;
+  display:flex;
+  align-items:center;
+  padding:15px 50px;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+}
+
+.logo-title {
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo-title h1 {
+  font-family:'Quicksand', sans-serif;
+  font-size:24px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+
+.logo-title img {
+  height:50px;
+  width:50px;
+  filter:brightness(0) invert(1);
+}
+
+nav {
+  display:flex;
+  gap:30px;
+  margin-left:65px;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:400;
+  font-size:16px;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color:#ffdd57;
+  cursor:pointer;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin: 100px 50px 50px 50px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+.main-content h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* FAQ ITEM / Accordion */
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #7a20b9;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 20px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.faq-question:hover {
+  background: #ffd70020;
+  transform: translateY(-1px);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  padding: 0 20px;
+  border-left: 4px solid #ffd700;
+  border-radius: 0 0 12px 12px;
+}
+
+.faq-answer p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 10px 0;
+}

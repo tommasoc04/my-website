@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>FAQ - La Schedina</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="octopus.svg" alt="Logo">
+    <h1>La Schedina</h1>
+  </div>
+  <nav>
+    <a href="index.html">Superquote</a>
+    <a href="scommesse.html">Scommesse</a>
+    <a href="bonus.html">Bonus</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main class="main-content">
+  <h2>Domande Frequenti (FAQ)</h2>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Come funziona La Schedina?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur commodo lorem sit amet ligula ultrices, vitae dictum ipsum cursus.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ È gratuito usare il sito?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo erat vel diam convallis, vel gravida leo elementum.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Come vengono aggiornate le quote?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula justo ac nunc gravida, sit amet tristique mauris tincidunt.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Posso ricevere notifiche sulle superquote?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut libero at ligula tempor scelerisque non vel lacus.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Cos'è una superquota?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nunc non facilisis gravida, justo erat dignissim mi, ut vulputate lacus metus non arcu.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Come posso segnalare un errore o un problema?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae turpis nec libero pulvinar tempus.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Come posso contattare il supporto clienti?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+  </section>
+
+  <section class="faq-item">
+    <button class="faq-question">❓ Posso suggerire nuove competizioni o tornei da aggiungere?</button>
+    <div class="faq-answer">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed risus at lacus lacinia dignissim.</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Accordion con simbolo [+]/[-] e animazione fluida
+  const faqButtons = document.querySelectorAll('.faq-question');
+
+  faqButtons.forEach(button => {
+    // Aggiungi simbolo [+] iniziale
+    button.innerHTML = '+ ' + button.innerHTML;
+
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+      // Chiudi tutte le risposte
+      document.querySelectorAll('.faq-answer').forEach(a => {
+        a.style.maxHeight = null;
+      });
+      faqButtons.forEach(b => {
+        if (b !== button) {
+          b.innerHTML = '+ ' + b.innerHTML.replace(/^[\+\-] /, '');
+        }
+      });
+
+      // Apri o chiudi quella cliccata
+      if (!isOpen) {
+        // Imposta max-height per triggerare la transizione
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        button.innerHTML = '- ' + button.innerHTML.replace(/^[\+\-] /, '');
+      } else {
+        answer.style.maxHeight = null;
+        button.innerHTML = '+ ' + button.innerHTML.replace(/^[\+\-] /, '');
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
