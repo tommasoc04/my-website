@@ -222,10 +222,10 @@ main h2 {
 /* BANNER SOCIAL */
 .banner-social {
   background-color: #f0f0f0;
-  padding: 20px 25px;
+  padding: 5px 25px;
   border-radius: 8px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .banner-social p {
@@ -259,7 +259,7 @@ footer {
   background-color: #7a20b9;
   color: white;
   padding: 30px 50px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .footer-container {
