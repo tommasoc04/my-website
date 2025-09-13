@@ -98,9 +98,36 @@ main h2 {
 }
 
 .superquote-card:hover {
-  transform: translateY(-3px) scale(1.03); /* sposta leggermente in alto e ingrandisce poco */
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.10); /* ombra più leggera e meno estesa */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.10), 0 0 12px rgba(255, 215, 0, 0.15);
   border: 2px solid #ffd700;
+}
+
+.superquote-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border 0.22s ease;
+  background: #ffffff;
+}
+
+.superquote-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 80%);
+  transform: skewX(-25deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.superquote-card:hover::after {
+  left: 125%;
+  opacity: 1;
+  transition: all 0.7s ease;
 }
 
 /* INNER CARD ANIMATION */
