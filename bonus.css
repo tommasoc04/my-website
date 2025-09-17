@@ -1,0 +1,66 @@
+/* ---------------------- */
+/* BASE E FONT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* ---------------------- */
+/* HEADER */
+header {
+  background-color: #7a20b9;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-title h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.logo-title img {
+  height: 50px;
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  margin-left: 65px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffdd57;
+}
+
+
